@@ -15,7 +15,6 @@ body {
 
 .header {
   height: 12vh;
-
   padding: 20px;
 }
 .search-container {
@@ -53,12 +52,12 @@ body {
 }
 
 .card-weather {
-  height: 90vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 10vh 0;
+  padding: 2vh 0;
 }
 
 .card-item {
@@ -77,10 +76,13 @@ body {
     rgba(150, 150, 236, 1) 35%,
     rgba(146, 200, 212, 0.7) 100%
   );
+  margin-bottom: 5px;
 }
 
 .footer {
-  display: flex;
+  display: block;
+  height: auto;
+  margin-top: 10px;
 }
 .links-externos {
   display: flex;
