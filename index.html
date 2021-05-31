@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="icon"
       href="./assets/gnome_weather_overcast.ico"
@@ -12,6 +13,10 @@
     <title>Weather App</title>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans:regular,italic,700,700italic"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./index.css" />
@@ -33,10 +38,13 @@
     </header>
     <section class="response-space">
       <div class="card-weather">
-        <div class="card-item card-weather-country">País</div>
-        <div class="card-item card-weather-city">Ciudad</div>
-        <div class="card-item card-weather-temp">Temperatura</div>
-        <div class="card-item card-weather-feelsLike">Sencación térmica</div>
+        <div class="card-weather-main">
+          <div class="card-weather-country">Lugar</div>
+          <div class="card-weather-descripcionClima">Descripción del clima</div>
+          <div class="card-weather-temp">°C</div>
+        </div>
+
+        <div class="card-item card-weather-feelsLike">Sensación térmica</div>
         <div class="card-item card-weather-minima">Temperatura mínima</div>
         <div class="card-item card-weather-maxima">Temperatura máxima</div>
         <div class="card-item card-weather-presion">Presión</div>
@@ -47,9 +55,6 @@
         </div>
         <div class="card-item card-weather-direccionViento">
           Dirección del viento
-        </div>
-        <div class="card-item card-weather-descripcionClima">
-          Descripción del clima
         </div>
       </div>
     </section>

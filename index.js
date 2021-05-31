@@ -27,12 +27,10 @@ function mostrarResultado(obj) {
   const card = document.querySelector(".card-weather");
 
   card.querySelector(".card-weather-country").textContent =
-    "País: " + obj.country;
-  card.querySelector(".card-weather-city").textContent = "Ciudad: " + obj.city;
-  card.querySelector(".card-weather-temp").textContent =
-    "La temperatura de hoy es:" + obj.temp + "°C";
+    obj.country + ", " + obj.city;
+  card.querySelector(".card-weather-temp").textContent = obj.temp + "°C";
   card.querySelector(".card-weather-feelsLike").textContent =
-    "La sensación termica es de: " + obj.feelsLike + "°C";
+    "Sensación termica: " + obj.feelsLike + "°C";
   card.querySelector(".card-weather-minima").textContent =
     "La mínima de hoy es de: " + obj.minima + "°C";
   card.querySelector(".card-weather-maxima").textContent =
@@ -48,7 +46,7 @@ function mostrarResultado(obj) {
   card.querySelector(".card-weather-direccionViento").textContent =
     "En dirección: " + obj.direccionViento + "°";
   card.querySelector(".card-weather-descripcionClima").textContent =
-    "Hoy el día está: " + obj.descripcionClima;
+    obj.descripcionClima;
 }
 
 function main() {

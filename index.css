@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Roboto", "Sans Serif";
+  font-family: "Noto Sans", "Roboto", "Sans Serif";
   color: #222222;
 }
 body {
@@ -8,14 +8,14 @@ body {
   background: rgb(238, 174, 202);
   background: radial-gradient(
     circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
+    rgba(238, 174, 202, 0.7) 0%,
+    rgba(148, 187, 233, 0.7) 100%
   );
 }
 
 .header {
   height: 12vh;
-  padding: 20px;
+  padding: 20px 10vw;
 }
 .search-container {
   height: 100%;
@@ -24,31 +24,37 @@ body {
   height: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .search-box {
-  background-color: #000;
-  border: none;
   height: 100%;
-  flex-grow: 1;
+  border: none;
   border-radius: 18px;
   margin-right: 5px;
+  flex-grow: 3;
   text-align: center;
   font-family: "Roboto";
   font-weight: 400;
   font-size: 24px;
   background-color: transparent;
-  box-shadow: 5px 5px 5px #fafafa40;
+  box-shadow: 5px 5px 5px #fafafa50;
 }
 .search-button {
   text-align: center;
-  font-family: "Roboto";
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
+  flex-grow: 2;
+
   border: none;
   height: 100%;
   border-radius: 18px;
   background-color: transparent;
   box-shadow: 5px 5px 5px #fafafa50;
+}
+.search-button:active {
+  background-color: #4a7c8030;
+  color: aliceblue;
+  transition: 0.2s;
 }
 
 .card-weather {
@@ -58,13 +64,35 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 2vh 0;
+  text-align: center;
+}
+.card-weather-main {
+  height: 200px;
+  width: 90vw;
+  margin-bottom: 10px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+  font-weight: 700;
+  font-size: 24px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  text-shadow: 5px 5px 5px #4a7c80;
+}
+
+.card-weather-temp {
+  grid-row: 2/3;
+  grid-column: 1/3;
+  align-self: center;
+  font-size: 5rem;
 }
 
 .card-item {
   border-left: 3px solid #dcdcdc99;
   border-bottom: 3px solid #dcdcdc99;
-  width: 80vw;
-  font-family: "Roboto";
+  width: 90vw;
   font-weight: 500;
   font-size: 24px;
   padding: 10px;
@@ -77,18 +105,30 @@ body {
     rgba(146, 200, 212, 0.7) 100%
   );
   margin-bottom: 5px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 2px #4a7c8099;
 }
 
 .footer {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: auto;
   margin-top: 10px;
 }
 .links-externos {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+
 .logo-redes-sociales {
   height: 30px;
+}
+
+.logo-redes-sociales:hover {
+  transform: rotateY(360deg);
+  transform: rotateX(360deg);
+  transition: 1.2s;
 }
