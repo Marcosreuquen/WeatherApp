@@ -5,17 +5,18 @@
 }
 body {
   margin: 0;
+  height: 100vh;
   background: rgb(238, 174, 202);
   background: radial-gradient(
     circle,
     rgba(238, 174, 202, 0.7) 0%,
     rgba(148, 187, 233, 0.7) 100%
   );
+  padding: 2vh 3vh;
 }
 
 .header {
   height: 12vh;
-  padding: 20px 10vw;
 }
 .search-container {
   height: 100%;
@@ -25,31 +26,19 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 .search-box {
-  height: 100%;
-  border: none;
-  border-radius: 18px;
-  margin-right: 5px;
-  flex-grow: 3;
-  text-align: center;
+  height: 50%;
   font-family: "Roboto";
-  font-weight: 400;
-  font-size: 24px;
   background-color: transparent;
-  box-shadow: 5px 5px 5px #fafafa50;
+  box-shadow: 5px 5px 5px #fafafa20;
 }
 .search-button {
+  height: 50%;
   text-align: center;
-  font-weight: 400;
-  font-size: 18px;
-  flex-grow: 2;
-
-  border: none;
-  height: 100%;
-  border-radius: 18px;
   background-color: transparent;
-  box-shadow: 5px 5px 5px #fafafa50;
+  box-shadow: 5px 5px 5px #fafafa20;
 }
 .search-button:active {
   background-color: #4a7c8030;
@@ -67,7 +56,7 @@ body {
   text-align: center;
 }
 .card-weather-main {
-  height: 200px;
+  height: auto;
   width: 90vw;
   margin-bottom: 10px;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
@@ -115,6 +104,7 @@ body {
   align-items: center;
   height: auto;
   margin-top: 10px;
+  background-color: transparent;
 }
 .links-externos {
   width: 100%;
